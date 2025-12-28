@@ -1,6 +1,12 @@
 # Ml_metods
 few metod can be used for instruct a ml pipine
 
+https://aleex87.github.io/Ml_metods/
+
+
+
+
+
 first steps create a venv with
 uv venv
 activate it with 
