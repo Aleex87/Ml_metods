@@ -3,88 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <title>Machine Learning Methods</title>
+
     <style>
+        :root {
+            --primary: #1a73e8;
+            --dark: #1f2933;
+            --light: #f5f7fa;
+            --gray: #6b7280;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 40px;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
         }
-        h1 {
+
+        header {
+            background: white;
+            padding: 50px 20px;
             text-align: center;
+            border-bottom: 1px solid #e5e7eb;
         }
-        ul {
-            margin-top: 30px;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
         }
-        li {
-            margin-bottom: 12px;
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        a {
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .diagram {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card a {
             text-decoration: none;
-            color: #1a73e8;
-            font-weight: bold;
+            color: var(--primary);
+            font-weight: 600;
         }
-        a:hover {
-            text-decoration: underline;
+
+        footer {
+            background: #111827;
+            color: #d1d5db;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
         }
-        .note {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #555;
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
         }
+
     </style>
 </head>
 <body>
 
-<h1>Machine Learning Methods</h1>
-
-<p>
-This website presents a collection of Machine Learning notebooks
-covering the most common supervised learning algorithms.
-Each notebook follows the same pipeline:
-</p>
-
-<ul>
-    <li>Data loading</li>
-    <li>Preprocessing</li>
-    <li>Model training</li>
-    <li>Prediction</li>
-    <li>Evaluation</li>
-</ul>
-
-<h2>Notebooks</h2>
-
-<ul>
-    <li>
-        <a href="01_linear_regression.html">
-            Linear Regression (Regression)
-        </a>
-    </li>
-    <li>
-        <a href="02_logistic_regression.html">
-            Logistic Regression (Classification)
-        </a>
-    </li>
-    <li>
-        <a href="03_knn.html">
-            K-Nearest Neighbors (Classification)
-        </a>
-    </li>
-    <li>
-        <a href="04_random_forest.html">
-            Random Forest (Classification)
-        </a>
-    </li>
-</ul>
-
-<div class="note">
+<header>
+    <h1>Machine Learning Methods</h1>
     <p>
-        This project is intended for educational purposes and demonstrates
-        the differences between regression and classification models,
-        as well as common evaluation metrics.
+        A concise and practical overview of fundamental Machine Learning techniques,
+        focusing on the difference between regression and classification models,
+        their training pipeline, and evaluation metrics.
     </p>
-</div>
+</header>
 
-</body>
-</html>
+<main>
+
+    <section>
+        <h2>Conceptual Overview</h2>
+
+        <div class="diagram">
+            <!-- SVG DIAGRAM -->
+            <svg width="900" height="420" viewBox="0 0 900 420">
+                <defs>
+                    <style>
+                        .box { fill: #ffffff; stroke: #1a73e8; stroke-width: 2; rx: 10; }
+                        .title { font: bold 14px Arial; fill: #1f2933; }
+                        .label { font: 13px Arial; fill: #374151; }
+                        .line { stroke: #9ca3af; stroke-width: 2; }
+                    </style>
+                </defs>
+
+                <!-- Supervised -->
+                <rect x="350" y="20" width="200" height="50" class="box"/>
+                <text x="450" y="50" text-anchor="middle" class="title">Supervised Learning</text>
+
+                <!-- Regression -->
+                <rect x="150" y="120" width="200" height="60" class="box"/>
+                <text x="250" y="145" text-anchor="middle" class="title">Regression</text>
+                <text x="250" y="165" text-anchor="middle" class="label">Continuous Outp
+
+                    
