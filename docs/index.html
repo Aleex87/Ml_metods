@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Machine Learning Methods</title>
 
+  <!-- Modern font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg: #f6f7fb;
@@ -12,133 +17,126 @@
       --text: #111827;
       --muted: #6b7280;
       --border: #e5e7eb;
-      --primary: #1a73e8;
-      --shadow: 0 10px 25px rgba(0,0,0,0.06);
+      --primary: #2563eb;
+      --shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    *{
+      box-sizing: border-box;
     }
 
     body{
       margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.6;
     }
 
+    /* ---------- HEADER ---------- */
     header{
-      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 56px 20px 40px;
+      background: linear-gradient(135deg, #0f172a 0%, #111827 60%, #020617 100%);
+      padding: 90px 20px 80px;
       text-align:center;
+      color: #e5e7eb;
     }
 
     header h1{
-      margin: 0 0 12px;
-      font-size: 2.4rem;
-      letter-spacing: 0.2px;
+      margin: 0 0 16px;
+      font-size: 3.1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #f9fafb;
     }
 
     header p{
       margin: 0 auto;
-      max-width: 820px;
-      color: var(--muted);
-      font-size: 1.05rem;
+      max-width: 900px;
+      font-size: 1.15rem;
+      color: #c7d2fe;
     }
 
+    /* ---------- MAIN ---------- */
     main{
       max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 20px 70px;
+      padding: 50px 20px 80px;
     }
 
-    .section-title{
-      font-size: 1.55rem;
-      margin: 0 0 16px;
+    h2{
+      font-size: 1.7rem;
+      margin-bottom: 18px;
     }
 
     .panel{
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 16px;
       box-shadow: var(--shadow);
-      padding: 22px;
+      padding: 24px;
+      margin-bottom: 40px;
     }
 
     .diagram-wrap{
-      overflow-x:auto;
+      overflow-x: auto;
     }
 
+    /* ---------- CARDS ---------- */
     .cards{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+      gap: 18px;
     }
 
     .card{
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 16px;
       box-shadow: var(--shadow);
-      padding: 18px 18px 16px;
+      padding: 22px;
     }
 
     .card h3{
       margin: 0 0 8px;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
 
     .card p{
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: var(--muted);
       font-size: 0.95rem;
     }
 
-    a.btn{
+    .btn{
       display:inline-block;
       text-decoration:none;
-      color: #fff;
+      color: #ffffff;
       background: var(--primary);
-      padding: 9px 12px;
-      border-radius: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
       font-weight: 600;
       font-size: 0.95rem;
     }
 
-    a.btn:hover{
+    .btn:hover{
       filter: brightness(0.95);
     }
 
-    .fallback{
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .fallback ul{
-      margin: 8px 0 0 18px;
-    }
-
-    .fallback a{
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .fallback a:hover{
-      text-decoration: underline;
-    }
-
+    /* ---------- FOOTER ---------- */
     footer{
-      background: #0b1220;
+      background: #020617;
       color: #cbd5e1;
-      padding: 28px 20px;
+      padding: 36px 20px;
       text-align:center;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
+
     footer a{
       color: #93c5fd;
       text-decoration:none;
       font-weight: 600;
     }
+
     footer a:hover{
       text-decoration: underline;
     }
@@ -146,113 +144,109 @@
 </head>
 
 <body>
-  <header>
-    <h1>Machine Learning Methods</h1>
-    <p>
-      A compact educational project showcasing a consistent ML pipeline and four core supervised learning methods:
-      Linear Regression, Logistic Regression, KNN, and Random Forest.
-    </p>
-  </header>
 
-  <main>
-    <h2 class="section-title">Conceptual Map</h2>
+<header>
+  <h1>Machine Learning Methods</h1>
+  <p>
+    A concise educational project showcasing the core concepts of supervised learning,
+    with a clear distinction between regression and classification models,
+    their pipelines, and evaluation metrics.
+  </p>
+</header>
+
+<main>
+
+  <!-- ===== DIAGRAM ===== -->
+  <section>
+    <h2>Conceptual Overview</h2>
 
     <div class="panel diagram-wrap">
-      <!-- Robust SVG (no fragile CSS dependencies inside SVG) -->
-      <svg width="980" height="420" viewBox="0 0 980 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Machine Learning conceptual map">
-        <!-- background -->
+      <svg width="980" height="420" viewBox="0 0 980 420" xmlns="http://www.w3.org/2000/svg" aria-label="Machine Learning conceptual map">
         <rect x="0" y="0" width="980" height="420" fill="#ffffff"/>
 
-        <!-- styles (safe inside SVG) -->
         <defs>
           <style>
-            .box { fill: #ffffff; stroke: #1a73e8; stroke-width: 2; }
+            .box { fill: #ffffff; stroke: #2563eb; stroke-width: 2; }
             .line { stroke: #9ca3af; stroke-width: 2; }
-            .title { font: 700 14px Arial, sans-serif; fill: #111827; }
-            .label { font: 13px Arial, sans-serif; fill: #374151; }
-            .muted { font: 12px Arial, sans-serif; fill: #6b7280; }
+            .title { font: 700 14px Inter, Arial, sans-serif; fill: #111827; }
+            .label { font: 13px Inter, Arial, sans-serif; fill: #374151; }
+            .muted { font: 12px Inter, Arial, sans-serif; fill: #6b7280; }
           </style>
         </defs>
 
-        <!-- Top -->
-        <rect x="390" y="28" width="200" height="54" rx="12" class="box"/>
+        <!-- Supervised -->
+        <rect x="390" y="28" width="200" height="54" rx="14" class="box"/>
         <text x="490" y="55" text-anchor="middle" class="title">Supervised Learning</text>
         <text x="490" y="73" text-anchor="middle" class="muted">(X → y)</text>
 
         <!-- Regression -->
-        <rect x="170" y="125" width="230" height="70" rx="12" class="box"/>
+        <rect x="170" y="125" width="230" height="70" rx="14" class="box"/>
         <text x="285" y="155" text-anchor="middle" class="title">Regression</text>
         <text x="285" y="175" text-anchor="middle" class="label">Continuous output</text>
 
         <!-- Classification -->
-        <rect x="580" y="125" width="230" height="70" rx="12" class="box"/>
+        <rect x="580" y="125" width="230" height="70" rx="14" class="box"/>
         <text x="695" y="155" text-anchor="middle" class="title">Classification</text>
         <text x="695" y="175" text-anchor="middle" class="label">Discrete classes</text>
 
         <!-- Regression model -->
-        <rect x="140" y="270" width="290" height="70" rx="12" class="box"/>
+        <rect x="140" y="270" width="290" height="70" rx="14" class="box"/>
         <text x="285" y="305" text-anchor="middle" class="label">Linear Regression</text>
 
         <!-- Classification models -->
-        <rect x="550" y="250" width="290" height="120" rx="12" class="box"/>
+        <rect x="550" y="250" width="290" height="120" rx="14" class="box"/>
         <text x="695" y="282" text-anchor="middle" class="label">Logistic Regression</text>
         <text x="695" y="308" text-anchor="middle" class="label">K-Nearest Neighbors (KNN)</text>
         <text x="695" y="334" text-anchor="middle" class="label">Random Forest</text>
 
-        <!-- Connecting lines -->
+        <!-- Lines -->
         <line x1="490" y1="82" x2="285" y2="125" class="line"/>
         <line x1="490" y1="82" x2="695" y2="125" class="line"/>
         <line x1="285" y1="195" x2="285" y2="270" class="line"/>
         <line x1="695" y1="195" x2="695" y2="250" class="line"/>
       </svg>
     </div>
+  </section>
 
-    <h2 class="section-title" style="margin-top:34px;">Implemented Notebooks</h2>
+  <!-- ===== MODELS ===== -->
+  <section>
+    <h2>Implemented Models</h2>
 
     <div class="cards">
       <div class="card">
         <h3>Linear Regression</h3>
-        <p>Predicts continuous numerical values (regression).</p>
+        <p>Predicts continuous numerical values using a linear model.</p>
         <a class="btn" href="01_linear_regression.html">Open page</a>
       </div>
 
       <div class="card">
         <h3>Logistic Regression</h3>
-        <p>Binary classification using probabilities and thresholds.</p>
+        <p>Binary classification using probabilities and decision thresholds.</p>
         <a class="btn" href="02_logistic_regression.html">Open page</a>
       </div>
 
       <div class="card">
         <h3>K-Nearest Neighbors</h3>
-        <p>Distance-based classifier; scaling is important.</p>
+        <p>Distance-based classification without an explicit training phase.</p>
         <a class="btn" href="03_knn.html">Open page</a>
       </div>
 
       <div class="card">
         <h3>Random Forest</h3>
-        <p>Ensemble of decision trees; strong baseline for classification.</p>
+        <p>Ensemble of decision trees providing robust predictions.</p>
         <a class="btn" href="04_random_forest.html">Open page</a>
       </div>
     </div>
+  </section>
 
-    <div class="fallback panel" style="margin-top:18px;">
-      <strong>Quick links (fallback)</strong>
-      <ul>
-        <li><a href="01_linear_regression.html">01 — Linear Regression</a></li>
-        <li><a href="02_logistic_regression.html">02 — Logistic Regression</a></li>
-        <li><a href="03_knn.html">03 — KNN</a></li>
-        <li><a href="04_random_forest.html">04 — Random Forest</a></li>
-      </ul>
-      <div style="margin-top:8px;">
-        If a link does not work, check the exact HTML filenames in the <code>docs/</code> folder and update the <code>href</code>.
-      </div>
-    </div>
+</main>
 
-  </main>
+<footer>
+  Machine Learning educational project ·
+  <a href="https://github.com/Aleex87/ML_metods" target="_blank" rel="noopener">
+    View on GitHub
+  </a>
+</footer>
 
-  <footer>
-    Machine Learning educational project ·
-    <a href="https://github.com/Aleex87/ML_metods" target="_blank" rel="noopener">View on GitHub</a>
-  </footer>
 </body>
 </html>
