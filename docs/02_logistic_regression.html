@@ -4,6 +4,68 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>02_logistic_regression</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<style>
+  .navbar {
+    background: #020617;
+    padding: 12px 20px;
+  }
+
+  .nav-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .brand {
+    color: #f9fafb;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropbtn {
+    background: none;
+    border: none;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+    z-index: 100;
+  }
+
+  .dropdown-content a {
+    color: #111827;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-content a:hover {
+    background: #f3f4f6;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
