@@ -171,6 +171,12 @@
             .title { font: 700 14px Inter, Arial, sans-serif; fill: #111827; }
             .label { font: 13px Inter, Arial, sans-serif; fill: #374151; }
             .muted { font: 12px Inter, Arial, sans-serif; fill: #6b7280; }
+            a:hover text {
+              fill: #2563eb;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+
           </style>
         </defs>
 
@@ -190,14 +196,33 @@
         <text x="695" y="175" text-anchor="middle" class="label">Discrete classes</text>
 
         <!-- Regression model -->
-        <rect x="140" y="270" width="290" height="70" rx="14" class="box"/>
-        <text x="285" y="305" text-anchor="middle" class="label">Linear Regression</text>
+        <a href="01_linear_regression.html">
+          <rect x="140" y="270" width="290" height="70" rx="14" class="box"/>
+          <text x="285" y="305" text-anchor="middle" class="label">
+            Linear Regression
+          </text>
+        </a>
 
         <!-- Classification models -->
         <rect x="550" y="250" width="290" height="120" rx="14" class="box"/>
-        <text x="695" y="282" text-anchor="middle" class="label">Logistic Regression</text>
-        <text x="695" y="308" text-anchor="middle" class="label">K-Nearest Neighbors (KNN)</text>
-        <text x="695" y="334" text-anchor="middle" class="label">Random Forest</text>
+        <a href="02_logistic_regression.html">
+        <text x="695" y="282" text-anchor="middle" class="label">
+          Logistic Regression
+        </text>
+      </a>
+
+      <a href="03_knn.html">
+        <text x="695" y="308" text-anchor="middle" class="label">
+          K-Nearest Neighbors (KNN)
+        </text>
+      </a>
+
+      <a href="04_random_forest.html">
+        <text x="695" y="334" text-anchor="middle" class="label">
+          Random Forest
+        </text>
+      </a>
+
 
         <!-- Lines -->
         <line x1="490" y1="82" x2="285" y2="125" class="line"/>

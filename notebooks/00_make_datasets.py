@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.datasets import make_regression, make_classification
 from pathlib import Path
 
-# Cartella data/
+# Data folder/
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
