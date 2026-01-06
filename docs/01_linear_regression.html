@@ -41,15 +41,16 @@
   .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;          
+    left: 0;
     background: #ffffff;
     min-width: 200px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     border-radius: 10px;
-    margin-top: 8px;
     overflow: hidden;
     z-index: 100;
   }
-
+  
   .dropdown-content a {
     color: #111827;
     padding: 10px 14px;
@@ -65,7 +66,7 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
-</style>
+
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
